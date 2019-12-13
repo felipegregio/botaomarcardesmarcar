@@ -1,0 +1,26 @@
+//botão que marca/desmarca os checkbox
+
+<button 
+  class='btn btn-large' 
+  type='button' 
+  title='Todos' 
+  onclick='marcardesmarcar();'>
+</button>
+
+//checkbox
+<input type='checkbox' class='marcar' name='check[]'>
+
+//função
+<script>
+function marcardesmarcar(){
+    $(".marcar").each(
+        function() {
+            if ($(this).prop("checked")) {
+                $(this).prop("checked", false);
+            } else {
+                $(this).prop("checked", true);
+            }
+        }
+    });
+}
+</script>
